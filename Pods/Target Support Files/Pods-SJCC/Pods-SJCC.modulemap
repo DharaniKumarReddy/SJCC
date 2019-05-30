@@ -1,0 +1,6 @@
+framework module Pods_SJCC {
+  umbrella header "Pods-SJCC-umbrella.h"
+
+  export *
+  module * { export * }
+}
