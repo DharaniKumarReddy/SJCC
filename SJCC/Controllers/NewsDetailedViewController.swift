@@ -45,6 +45,7 @@ extension NewsDetailedViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: NewsDetailedTableCell.self)) as? NewsDetailedTableCell
         cell?.loadData(newsDetails: news)
+        cell?.delegate = self
         return cell ?? UITableViewCell()
     }
 }

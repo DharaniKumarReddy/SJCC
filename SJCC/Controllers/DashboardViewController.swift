@@ -109,33 +109,35 @@ class DashboardViewController: UIViewController {
     
     private func downloadImages(_ gallery: [HomeGallery]) {
         var slidePhotos: [UIImage] = []
+        var slideTitles: [String] = []
         for photo in gallery {
             photo.image.downloadImage(completion: { image in
                 slidePhotos.append(image)
+                slideTitles.append(photo.title)
                 if gallery.count == slidePhotos.count {
                     DispatchQueue.main.async {
-                        self.animateImageSlides(images: slidePhotos)
+                        self.animateImageSlides(images: slidePhotos, titles: slideTitles)
                     }
                 }
             })
         }
     }
 
-    private func animateImageSlides(images: [UIImage]) {
+    private func animateImageSlides(images: [UIImage], titles: [String]) {
         slideImages = images
         homeGalleryButton.isUserInteractionEnabled = true
-        loadSliding()
+        loadSliding(titles: titles)
     }
     
-    private func loadSliding() {
+    private func loadSliding(titles: [String]) {
         if self.slidePosition >= self.gallery.count {
             slidePosition = 0
         }
-        slidingImageTitle.text = self.gallery[slidePosition].title
+        slidingImageTitle.text = titles[slidePosition] //self.gallery[slidePosition].title
         slidingImageView.image = slideImages[slidePosition]
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.slidePosition += 1
-            self.loadSliding()
+            self.loadSliding(titles: titles)
         }
     }
     
