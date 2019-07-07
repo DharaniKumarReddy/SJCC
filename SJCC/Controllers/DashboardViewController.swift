@@ -259,7 +259,8 @@ class DashboardViewController: UIViewController {
             if success == 1 {
                 self.dismissPopUp()
                 Messaging.messaging().subscribe(toTopic: "faculty")
-                UserDefaults.standard.set(true, forKey: Constant.UserDefaults.isStaffDashboardLoggedIn)
+                UserDefaults.standard.set(true, forKey: Constant.UserDefaults.isStaffLoggedIn)
+                AppDelegate.getAppdelegate()?.dashboard?.getNotifications()
                 let staffViewController = UIStoryboard.loadStaffViewController()
                 self.navigationController?.pushViewController(staffViewController, animated: true)
             } else {
@@ -299,6 +300,8 @@ class DashboardViewController: UIViewController {
         let currentXPoint = scrollView.contentOffset.x
         let xPoint = gesture.direction == .left ? currentXPoint+screenWidth : currentXPoint-screenWidth
         guard xPoint >= 0 && xPoint <= screenWidth*3 else { return }
+        loadDefaultImages()
+        tabImages.filter({$0.tag == Int(xPoint/screenWidth)}).first?.image = UIImage(named: ["home_selected", "news_selected", "notifications_selected", "web_selected"][Int(xPoint/screenWidth)])
         animateIndicator(index: xPoint/screenWidth)
         animateScrollView(point: CGPoint(x: xPoint, y: 0))
     }
@@ -309,7 +312,11 @@ class DashboardViewController: UIViewController {
     }
     
     @IBAction private func staffButton_Tapped() {
-        guard !UserDefaults.standard.bool(forKey: Constant.UserDefaults.isStaffDashboardLoggedIn) else {
+        guard !UserDefaults.standard.bool(forKey: Constant.UserDefaults.isStudentLoggedIn) else {
+            view.makeToast("You can't open Staff", duration: 0.8, position: .bottom)
+            return
+        }
+        guard !UserDefaults.standard.bool(forKey: Constant.UserDefaults.isStaffLoggedIn) else {
             let staffViewController = UIStoryboard.loadStaffViewController()
             self.navigationController?.pushViewController(staffViewController, animated: true)
             return
@@ -373,7 +380,7 @@ class DashboardViewController: UIViewController {
     }
     
     @IBAction private func studentLoginButton_Tapped() {
-        guard !UserDefaults.standard.bool(forKey: Constant.UserDefaults.isStudentLoggedIn) else {
+        guard !(UserDefaults.standard.bool(forKey: Constant.UserDefaults.isStudentLoggedIn) || UserDefaults.standard.bool(forKey: Constant.UserDefaults.isStaffLoggedIn)) else {
             let studentViewController = UIStoryboard.loadStudentViewController()
             self.navigationController?.pushViewController(studentViewController, animated: true)
             return

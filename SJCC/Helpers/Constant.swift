@@ -17,7 +17,6 @@ struct Constant {
         static let deviceToken                          = "device_token"
         static let isPushNotificationAlertTriggered     = "PushNotificationAlertTriggered"
         static let isStaffLoggedIn                      = "IsStaffLoggedIn"
-        static let isStaffDashboardLoggedIn             = "isStaffDashboardLoggedIn"
         static let isStudentLoggedIn                    = "IsStudentLoggedIn"
     }
 }

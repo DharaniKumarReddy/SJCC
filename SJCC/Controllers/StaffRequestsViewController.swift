@@ -56,7 +56,7 @@ class StaffRequestsViewController: UIViewController {
     private func sendEmail() {
         let mailVC = MFMailComposeViewController()
         mailVC.mailComposeDelegate = self
-        mailVC.setToRecipients(["principal@sjcc.edu.in"])
+        mailVC.setToRecipients(["principal@sjcc.edu.in", "avinash@sjcc.edu.in"])
         mailVC.setSubject(getMailSubject())
         mailVC.setMessageBody(getMailBody(), isHTML: false)
         present(mailVC, animated: true, completion: nil)

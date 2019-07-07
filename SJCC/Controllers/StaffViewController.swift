@@ -10,7 +10,7 @@ import UIKit
 
 class StaffViewController: UIViewController {
 
-    let staffItems = ["Leave Status / Apply for Leave", "Meeting Remainders / Announcements",
+    let staffItems = ["Leave Status / Apply for Leave", "Meeting Reminders / Announcements",
                       "Academic Calender", "Staff Achievements", "Conference / Seminar Alerts ",
                       "Staff Duties", "Service Rules & Regulations", "Salary Slips"]
     

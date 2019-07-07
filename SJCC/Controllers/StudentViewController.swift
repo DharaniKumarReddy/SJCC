@@ -10,7 +10,7 @@ import UIKit
 
 class StudentViewController: UIViewController {
 
-    let studentItems = ["Announcements", "Examinations", "Student Activities", "Placement Cell", "Downloads", "Sjcc Writes", "Complaint Registry", "Feedback"]
+    let studentItems = ["Announcements", "Examinations", "Student Activities", "Placement Cell", "Downloads", "Sjcc Writes", "Complaint Registry", "Feedback", "Student Welfare Committees"]
     
     // MARK:- IBOutlets
     @IBOutlet private weak var navigationBarViewHeightConstant: NSLayoutConstraint!
@@ -50,6 +50,9 @@ extension StudentViewController: UITableViewDataSource, UITableViewDelegate {
             navigationController?.pushViewController(studentPlacementsViewController, animated: true)
         case 6, 7:
             pushWebViewController(["", "", "", "", "", "", "http://sjcc.edu.in/sjcc_app/complaint_registry.php", "http://sjcc.edu.in/sjcc_app/student_feedback.php"][indexPath.row])
+        case 8:
+            let studentWelfareCommitteeViewController = UIStoryboard.loadStudentWelfareCommitteesViewController()
+            navigationController?.pushViewController(studentWelfareCommitteeViewController, animated: true)
         default:
             break
         }

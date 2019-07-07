@@ -128,4 +128,8 @@ extension UIStoryboard {
     class func loadStudentPlacementsViewController() -> StudentPlacementCellViewController {
         return loadFromMain(String(describing: StudentPlacementCellViewController.self)) as! StudentPlacementCellViewController
     }
+    
+    class func loadStudentWelfareCommitteesViewController() -> StudentWelfareCommitteesViewController {
+        return loadFromMain(String(describing: StudentWelfareCommitteesViewController.self)) as! StudentWelfareCommitteesViewController
+    }
 }

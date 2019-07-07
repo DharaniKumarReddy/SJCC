@@ -56,6 +56,7 @@
 		9F7BF100228801B1004229A2 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BF0FF228801B1004229A2 /* ShadowView.swift */; };
 		9F7BF10222880D6F004229A2 /* ProspectUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BF10122880D6F004229A2 /* ProspectUsViewController.swift */; };
 		9F7BF10422882235004229A2 /* AnnouncementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BF10322882235004229A2 /* AnnouncementsViewController.swift */; };
+		9F83BD6622D06E5D00364E0E /* StudentWelfareCommitteesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F83BD6522D06E5D00364E0E /* StudentWelfareCommitteesViewController.swift */; };
 		9FB8C2EB2283D0A200B7C6FB /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB8C2EA2283D0A200B7C6FB /* UILabelExtension.swift */; };
 		9FB8C2ED2283DA6B00B7C6FB /* AluminiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB8C2EC2283DA6B00B7C6FB /* AluminiViewController.swift */; };
 		9FE300622298178A004CDCA5 /* StudentAnnouncementsExaminationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE300612298178A004CDCA5 /* StudentAnnouncementsExaminationsViewController.swift */; };
@@ -144,6 +145,7 @@
 		9F7BF0FF228801B1004229A2 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		9F7BF10122880D6F004229A2 /* ProspectUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectUsViewController.swift; sourceTree = "<group>"; };
 		9F7BF10322882235004229A2 /* AnnouncementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewController.swift; sourceTree = "<group>"; };
+		9F83BD6522D06E5D00364E0E /* StudentWelfareCommitteesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentWelfareCommitteesViewController.swift; sourceTree = "<group>"; };
 		9FB8C2EA2283D0A200B7C6FB /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		9FB8C2EC2283DA6B00B7C6FB /* AluminiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AluminiViewController.swift; sourceTree = "<group>"; };
 		9FE300612298178A004CDCA5 /* StudentAnnouncementsExaminationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAnnouncementsExaminationsViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				9FE300612298178A004CDCA5 /* StudentAnnouncementsExaminationsViewController.swift */,
 				9FE300652298337B004CDCA5 /* StudentPlacementCellViewController.swift */,
 				9F03B9F2229790B000DBB002 /* StudentViewController.swift */,
+				9F83BD6522D06E5D00364E0E /* StudentWelfareCommitteesViewController.swift */,
 				9F7AC4F1228085EA00D4BE7D /* TeacherProgramsViewController.swift */,
 				9F01B357227D3AB000AF92F0 /* WebViewController.swift */,
 			);
@@ -701,6 +704,7 @@
 				9F01B358227D3AB000AF92F0 /* WebViewController.swift in Sources */,
 				9F1CFBB9225A2D720039361B /* Route.swift in Sources */,
 				9F51B083228F904700B9D9C0 /* AppDelegateExtension.swift in Sources */,
+				9F83BD6622D06E5D00364E0E /* StudentWelfareCommitteesViewController.swift in Sources */,
 				9F31D4C922795F2E00739425 /* UIApplicationExtension.swift in Sources */,
 				9F31D4C722795EDE00739425 /* UIViewControllerExtension.swift in Sources */,
 				9F1CFBB32259AC6E0039361B /* MenuViewController.swift in Sources */,
